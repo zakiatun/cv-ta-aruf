@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae Taaruf - Zakiatun Nufus</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        --surface-color: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #475569;
+        --primary: #0d9488; /* Deep Teal */
+        --primary-light: #ccfbf1;
+        --accent: #0284c7;
+        --border: #e2e8f0;
+        --radius-lg: 20px;
+        --radius-md: 12px;
+        --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+        --shadow-md:
+          0 10px 25px -5px rgb(0 0 0 / 0.05), 0 4px 10px -5px rgb(0 0 0 / 0.05);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: var(--bg-gradient);
+        color: var(--text-main);
+        line-height: 1.7;
+        padding: 60px 20px;
+        letter-spacing: -0.01em;
+      }
+
+      .wrapper {
+        max-width: 840px;
+        margin: 0 auto;
+        background-color: var(--surface-color);
+        padding: 50px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 32px;
+        position: relative;
+      }
+
+      .badge {
+        background-color: var(--primary-light);
+        color: var(--primary);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 100px;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-main);
+        letter-spacing: -0.03em;
+        line-height: 1.2;
+        margin-bottom: 8px;
+      }
+
+      .meta-stamp {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-weight: 400;
+      }
+
+      .disclaimer-banner {
+        background-color: #f8fafc;
+        border: 1px solid var(--border);
+        padding: 16px 20px;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .disclaimer-banner strong {
+        color: var(--text-main);
+      }
+
+      section {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-main);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--border);
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin-top: 18px;
+        margin-bottom: 8px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .info-card {
+        background-color: #fafafa;
+        border: 1px solid var(--border);
+        padding: 16px;
+        border-radius: var(--radius-md);
+        transition: all 0.2s ease;
+      }
+
+      .info-card:hover {
+        border-color: var(--primary);
+        background-color: #ffffff;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .info-card span {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .info-card p {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-main);
+      }
+
+      ul {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 12px;
+        font-size: 0.975rem;
+      }
+
+      .timeline-item::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1.2rem;
+        top: -2px;
+      }
+
+      .desc-text {
+        font-size: 0.975rem;
+        color: var(--text-muted);
+        text-align: justify;
+        margin-bottom: 16px;
+      }
+
+      .focus-banner {
+        background: linear-gradient(145deg, #f0fdf4 0%, #ecfdf5 100%);
+        border: 1px solid #bbf7d0;
+        padding: 24px;
+        border-radius: var(--radius-md);
+        margin-top: 30px;
+      }
+
+      .focus-banner p {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #166534;
+        line-height: 1.6;
+      }
+
+      .subsection-block {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 20px 12px;
+        }
+        .wrapper {
+          padding: 24px;
+        }
+        h1 {
+          font-size: 1.75rem;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          padding: 0;
+        }
+        .wrapper {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+          max-width: 100%;
+        }
+        .info-card {
+          background: #fff !important;
+          border: 1px solid #ccc !important;
+        }
+        .focus-banner {
+          background: #fff !important;
+          border: 1px solid #ccc !important;
+          color: #000 !important;
+        }
+        .disclaimer-banner {
+          background: #fff !important;
+          border: 1px solid #ccc !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="badge">Biodata Pribadi</div>
+        <h1>Zakiatun Nufus</h1>
+        <div class="meta-stamp">Terakhir Diperbarui &bull; Mei 2026</div>
+      </header>
+
+      <div class="disclaimer-banner">
+        <strong>Catatan Transparansi:</strong> Profil ini disusun dan dirapikan
+        tata bahasa serta visualnya menggunakan bantuan AI (asisten kecerdasan
+        buatan) agar lebih runut, minimalis, dan scannable. Namun, seluruh
+        substansi, data diri, prinsip hidup, hingga detail terkecil di dalamnya
+        murni dan sepenuhnya adalah cerminan jujur dari kondisi nyata saya.
+      </div>
+
+      <section>
+        <h2>I. Identitas & Data Diri</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <span>Lahir</span>
+            <p>Pekon Balak, 15 Juli 1997 (29 Th)</p>
+          </div>
+          <div class="info-card">
+            <span>Status</span>
+            <p>Belum Pernah Menikah</p>
+          </div>
+          <div class="info-card">
+            <span>Izin Wali (Bapak)</span>
+            <p>Sudah Dapat Restu Penuh</p>
+          </div>
+          <div class="info-card">
+            <span>Suku / Agama</span>
+            <p>Jawa / Islam</p>
+          </div>
+          <div class="info-card">
+            <span>Domisili Weekday</span>
+            <p>Pulau Panggung, Tanggamus</p>
+          </div>
+          <div class="info-card">
+            <span>Domisili Weekend</span>
+            <p>Wonosobo, Tanggamus</p>
+          </div>
+        </div>
+        <h3>Kontak Wasilah (Kakak Kandung)</h3>
+        <ul>
+          <li class="timeline-item">
+            <strong>Mba Sri:</strong> 0853-7977-6579
+          </li>
+          <li class="timeline-item">
+            <strong>Mas Duwi:</strong> 0857-8339-7473
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>II. Pendidikan & Karir</h2>
+        <h3>Pendidikan Formal</h3>
+        <ul>
+          <li class="timeline-item">
+            <strong>S1 Ilmu Komputer</strong> &ndash; Universitas Lampung
+            (2016&ndash;2021)
+          </li>
+          <li class="timeline-item">
+            <strong>SMAN 1 Kotaagung</strong> (2013&ndash;2016)
+          </li>
+          <li class="timeline-item">
+            <strong>SMPN 1 Wonosobo</strong> (2010&ndash;2013)
+          </li>
+          <li class="timeline-item">
+            <strong>SDN 1 Padangmanis</strong> (2004&ndash;2010)
+          </li>
+        </ul>
+        <h3>Pengalaman Kerja</h3>
+        <ul>
+          <li class="timeline-item">
+            <strong>Guru di SMKN 1 Air Naningan</strong> (2024&ndash;Sekarang)
+            &bull; <em>Aparatur Sipil Negara (ASN PPPK)</em>
+          </li>
+          <li class="timeline-item">
+            <strong>Guru di SMKN 1 Kotaagung Barat</strong> (2021&ndash;2024)
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>III. Gambaran Fisik & Kesehatan</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <span>Tinggi / Berat</span>
+            <p>&plusmn;159 cm / &plusmn;70 kg</p>
+          </div>
+          <div class="info-card">
+            <span>Karakter Fisik</span>
+            <p>Sawo Matang, Rambut Hitam Lurus, Mata Cokelat</p>
+          </div>
+          <div class="info-card">
+            <span>Ciri Khas</span>
+            <p>Gigi Gingsul & Tanda Lahir di Betis Belakang Kanan</p>
+          </div>
+        </div>
+        <p class="desc-text">
+          <strong>Kondisi Medis Khusus:</strong> Memiliki riwayat gejala maag
+          sejak bangku SD dan kondisi medis kulit ringan berupa Keratosis
+          Pilaris (kulit ayam) di area sebagian lengan. Secara umum dalam
+          kondisi prima, bugar, dan siap menjalankan peran fisik sebagai seorang
+          istri.
+        </p>
+      </section>
+
+      <section>
+        <h2>IV. Karakter & Manajemen Hubungan</h2>
+        <div class="subsection-block">
+          <h3>Sifat Positif (Dampak Rumah Tangga)</h3>
+          <p class="desc-text">
+            Saya sangat menghargai komitmen, bertanggung jawab, dan berusaha
+            maksimal menempati janji. Sebagai pribadi yang terencana, saya
+            menyukai persiapan matang namun senantiasa melatih diri rida pada
+            keputusan Allah. Dalam harian, saya jujur, apa adanya, menyukai
+            kedamaian, serta menghindari konflik tidak produktif.
+          </p>
+        </div>
+        <div class="subsection-block">
+          <h3>Kekurangan & Ruang Evaluasi</h3>
+          <p class="desc-text">
+            Saya tipe pemikir yang membutuhkan waktu tenang saat merespons
+            masalah, membutuhkan durasi sedikit lebih lama mengolah hal baru,
+            cukup pelupa, dan mudah terdistraksi. Kadang kala saya memendam rasa
+            jengkel sendiri demi meminimalisir perselisihan. Saat ini, saya
+            aktif berproses menurunkan ego, melatih empati dari sudut pandang
+            orang lain, serta menjaga konsistensi ritme ibadah mandiri.
+          </p>
+        </div>
+        <div class="subsection-block">
+          <h3>Manajemen Konflik & Komunikasi Emosi</h3>
+          <p class="desc-text">
+            Saat terjadi ketidaksepahaman, kecenderungan asli saya adalah diam
+            sejenak mengolah pikiran. Apabila pasangan melihat perubahan sikap
+            atau tanda kemarahan, saya sangat mengharapkan pasangan bersedia
+            bertanya secara langsung dengan tutur kata lembut dan tidak
+            membentak. Pendekatan tenang ini membuat saya merasa aman untuk
+            berbicara jujur.
+          </p>
+        </div>
+        <div class="subsection-block">
+          <h3>Prinsip Menerima Nasihat</h3>
+          <p class="desc-text">
+            Saya sangat terbuka pada ruang evaluasi diri, kritik, dan bimbingan
+            ilmu. Syarat utamanya adalah didiskusikan saat momen santai berdua
+            saja dan tidak ditegur di ruang publik atau depan orang lain demi
+            menjaga kehormatan kedua belah pihak.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>V. Dinamika Keluarga & Ritme Harian</h2>
+        <p class="desc-text">
+          Saat ini saya tinggal membersamai Bapak (Bapak Carsan, 72 tahun,
+          Petani). Ibu telah berpulang ke Rahmatullah pada November 2022. Kami
+          berakar dari latar belakang keluarga Nahdliyin sederhana yang
+          cenderung pendiam dan apa adanya. Atmosfer rumah tenang dan kami
+          berinteraksi intensif umumnya saat momen agenda tertentu.
+        </p>
+        <h3>Jadwal & Aktivitas Rutin</h3>
+        <ul>
+          <li class="timeline-item">
+            <strong>Hari Kerja (Weekday):</strong> Fokus profesi guru di
+            sekolah. Wajib berada di instansi dari pukul 07.15 hingga 16.00 WIB.
+          </li>
+          <li class="timeline-item">
+            <strong>Hari Libur (Weekend):</strong> Kembali ke Wonosobo,
+            produktif menyelesaikan urusan domestik rumah serta mengasuh dan
+            bermain dengan keponakan.
+          </li>
+          <li class="timeline-item">
+            <strong>Kebiasaan Spiritual:</strong> Menjaga salat tepat waktu,
+            merutinkan tilawah harian harian, serta berikhtiar memperkuat dan
+            membantu hafalan surah-surah pendek.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>VI. Visi, Misi, & Masa Depan</h2>
+        <p class="desc-text">
+          <strong>Visi:</strong> Membangun rumah tangga sebagai madrasah pertama
+          yang sakinah, tempat untuk saling membimbing dan menguatkan dalam
+          ketaatan, serta terus belajar memperbaiki diri bersama secara
+          konsisten.
+        </p>
+        <h3>Misi Utama Pernikahan</h3>
+        <ul>
+          <li class="timeline-item">
+            Saling membimbing dalam koridor ketaatan.
+          </li>
+          <li class="timeline-item">
+            Bertumbuh dan belajar kolektif di berbagai lini kehidupan.
+          </li>
+          <li class="timeline-item">
+            Menerapkan komunikasi dua arah yang terbuka tanpa adanya intimidasi.
+          </li>
+          <li class="timeline-item">
+            Berkomitmen melahirkan rumah yang aman dan penuh kasih untuk
+            mencetak generasi berakhlak mulia.
+          </li>
+        </ul>
+        <h3>Rencana Domestik & Profesional</h3>
+        <p class="desc-text">
+          <strong>Kolaborasi Rumah Tangga:</strong> Karena jam kerja saya tetap
+          sebagai aparatur sipil negara, saya mengharapkan kerja sama tim
+          (teamwork) yang solid bersama suami dalam mengelola urusan domestik
+          rumah tangga secara fleksibel.
+        </p>
+        <p class="desc-text">
+          <strong>Garis Masa Finansial:</strong> Menargetkan pernikahan di akhir
+          tahun 2026 demi menuntaskan seluruh sisa tanggung jawab finansial
+          personal, agar siap secara mental dan finansial mandiri. Konsep
+          walimah didesain sederhana, syar'i, berupa syukuran khidmat tanpa
+          hiburan musik berlebih yang memberatkan suami.
+        </p>
+        <p class="desc-text">
+          <strong>Nafkah & Pengasuhan:</strong> Menyerahkan otoritas nafkah
+          kepada suami sebagai pemimpin, dan siap mengelolanya dengan qona'ah.
+          Untuk anak, prioritas awal pada akidah, adab, dan kedisiplinan ibadah,
+          dengan aspirasi jangka panjang melanjutkan studi ke pondok pesantren.
+        </p>
+      </section>
+
+      <section>
+        <h2>VII. Parameter Calon Pasangan</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <span>Fisik Utama</span>
+            <p>Tinggi badan &ge; 160 cm</p>
+          </div>
+          <div class="info-card">
+            <span>Jarak Usia</span>
+            <p>2 tahun lebih muda s.d. 5 tahun lebih tua</p>
+          </div>
+          <div class="info-card">
+            <span>Pendidikan</span>
+            <p>Minimal Diploma (D3) atau Sarjana (S1)</p>
+          </div>
+          <div class="info-card">
+            <span>Status</span>
+            <p>Belum Pernah Menikah</p>
+          </div>
+        </div>
+        <p class="desc-text">
+          <strong>Karakter Sosial & Keagamaan:</strong> Memiliki pemahaman agama
+          yang diaplikasikan dalam perilaku nyata, beretos kerja kuat,
+          bertanggung jawab mandiri atas nafkah, penyabar (tidak temperamental),
+          mampu berkomunikasi tanpa intimidasi, serta menghargai kapasitas
+          intelektual istri (mendukung proses belajar dan studi lanjut).
+        </p>
+        <p class="desc-text">
+          <strong>Kondisi Geografis:</strong> Siap dan bersedia penuh berpindah
+          domisili mengikuti penugasan atau tempat tinggal suami.
+        </p>
+      </section>
+
+      <section>
+        <h2>VIII. Protokol Proses</h2>
+        <div class="focus-banner">
+          <p>
+            Penulisan profil ini adalah ikhtiar jujur untuk mengenalkan diri
+            secara apa adanya. Dalam koridor proses, saya berkomitmen memegang
+            teguh prinsip <strong>single-tasking</strong>. Saya hanya memproses
+            satu orang secara fokus dan tuntas sebelum membuka peluang bagi
+            proses berikutnya demi menjaga kejelasan dan kehormatan kedua belah
+            pihak.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
