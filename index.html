@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum Vitae Taaruf - Zakiatun Nufus</title>
-    <!-- Google Fonts for premium typography -->
+    <!-- Google Fonts untuk tipografi premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,18 +13,18 @@
     />
     <style>
       :root {
-        --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        --surface-color: #ffffff;
-        --text-main: #0f172a;
-        --text-muted: #475569;
-        --primary: #0d9488; /* Deep Teal */
-        --primary-light: #ccfbf1;
-        --accent: #0284c7;
-        --border: #e2e8f0;
-        --radius-lg: 20px;
-        --radius-md: 12px;
-        --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05);
-        --shadow-md:
+        --latar-gradasi: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        --warna-dasar: #ffffff;
+        --teks-utama: #0f172a;
+        --teks-redup: #475569;
+        --warna-primer: #0d9488; /* Deep Teal */
+        --warna-primer-muda: #ccfbf1;
+        --warna-aksen: #0284c7;
+        --garis-tepi: #e2e8f0;
+        --sudut-besar: 20px;
+        --sudut-sedang: 12px;
+        --bayangan-halus: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+        --bayangan-tegas:
           0 10px 25px -5px rgb(0 0 0 / 0.05), 0 4px 10px -5px rgb(0 0 0 / 0.05);
       }
 
@@ -36,21 +36,21 @@
 
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
-        background: var(--bg-gradient);
-        color: var(--text-main);
+        background: var(--latar-gradasi);
+        color: var(--teks-utama);
         line-height: 1.7;
         padding: 60px 20px;
         letter-spacing: -0.01em;
       }
 
-      .wrapper {
+      .pembungkus-utama {
         max-width: 840px;
         margin: 0 auto;
-        background-color: var(--surface-color);
+        background-color: var(--warna-dasar);
         padding: 50px;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--border);
+        border-radius: var(--sudut-besar);
+        box-shadow: var(--bayangan-tegas);
+        border: 1px solid var(--garis-tepi);
       }
 
       header {
@@ -61,9 +61,9 @@
         position: relative;
       }
 
-      .badge {
-        background-color: var(--primary-light);
-        color: var(--primary);
+      .lencana-status {
+        background-color: var(--warna-primer-muda);
+        color: var(--warna-primer);
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -76,31 +76,31 @@
       h1 {
         font-size: 2.25rem;
         font-weight: 700;
-        color: var(--text-main);
+        color: var(--teks-utama);
         letter-spacing: -0.03em;
         line-height: 1.2;
         margin-bottom: 8px;
       }
 
-      .meta-stamp {
+      .penanda-waktu {
         font-size: 0.875rem;
-        color: var(--text-muted);
+        color: var(--teks-redup);
         font-weight: 400;
       }
 
-      .disclaimer-banner {
+      .spanduk-transparansi {
         background-color: #f8fafc;
-        border: 1px solid var(--border);
+        border: 1px solid var(--garis-tepi);
         padding: 16px 20px;
-        border-radius: var(--radius-md);
+        border-radius: var(--sudut-sedang);
         font-size: 0.875rem;
-        color: var(--text-muted);
+        color: var(--teks-redup);
         margin-bottom: 40px;
         line-height: 1.6;
       }
 
-      .disclaimer-banner strong {
-        color: var(--text-main);
+      .spanduk-transparansi strong {
+        color: var(--teks-utama);
       }
 
       section {
@@ -110,7 +110,7 @@
       h2 {
         font-size: 1.15rem;
         font-weight: 700;
-        color: var(--text-main);
+        color: var(--teks-utama);
         text-transform: uppercase;
         letter-spacing: 0.08em;
         margin-bottom: 20px;
@@ -123,52 +123,52 @@
         content: "";
         flex: 1;
         height: 1px;
-        background-color: var(--border);
+        background-color: var(--garis-tepi);
       }
 
       h3 {
         font-size: 1rem;
         font-weight: 600;
-        color: var(--primary);
+        color: var(--warna-primer);
         margin-top: 18px;
         margin-bottom: 8px;
       }
 
-      .info-grid {
+      .kisi-informasi {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 16px;
         margin-bottom: 24px;
       }
 
-      .info-card {
+      .kartu-informasi {
         background-color: #fafafa;
-        border: 1px solid var(--border);
+        border: 1px solid var(--garis-tepi);
         padding: 16px;
-        border-radius: var(--radius-md);
+        border-radius: var(--sudut-sedang);
         transition: all 0.2s ease;
       }
 
-      .info-card:hover {
-        border-color: var(--primary);
+      .kartu-informasi:hover {
+        border-color: var(--warna-primer);
         background-color: #ffffff;
-        box-shadow: var(--shadow-sm);
+        box-shadow: var(--bayangan-halus);
       }
 
-      .info-card span {
+      .kartu-informasi span {
         display: block;
         font-size: 0.8rem;
-        color: var(--text-muted);
+        color: var(--teks-redup);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin-bottom: 4px;
         font-weight: 500;
       }
 
-      .info-card p {
+      .kartu-informasi p {
         font-size: 0.95rem;
         font-weight: 600;
-        color: var(--text-main);
+        color: var(--teks-utama);
       }
 
       ul {
@@ -176,46 +176,46 @@
         margin-bottom: 20px;
       }
 
-      .timeline-item {
+      .baris-poin {
         position: relative;
         padding-left: 24px;
         margin-bottom: 12px;
         font-size: 0.975rem;
       }
 
-      .timeline-item::before {
+      .baris-poin::before {
         content: "•";
         position: absolute;
         left: 0;
-        color: var(--primary);
+        color: var(--warna-primer);
         font-weight: bold;
         font-size: 1.2rem;
         top: -2px;
       }
 
-      .desc-text {
+      .teks-deskripsi {
         font-size: 0.975rem;
-        color: var(--text-muted);
+        color: var(--teks-redup);
         text-align: justify;
         margin-bottom: 16px;
       }
 
-      .focus-banner {
+      .spanduk-fokus {
         background: linear-gradient(145deg, #f0fdf4 0%, #ecfdf5 100%);
         border: 1px solid #bbf7d0;
         padding: 24px;
-        border-radius: var(--radius-md);
+        border-radius: var(--sudut-sedang);
         margin-top: 30px;
       }
 
-      .focus-banner p {
+      .spanduk-fokus p {
         font-size: 0.95rem;
         font-weight: 500;
         color: #166534;
         line-height: 1.6;
       }
 
-      .subsection-block {
+      .blok-subbagian {
         margin-bottom: 16px;
       }
 
@@ -223,7 +223,7 @@
         body {
           padding: 20px 12px;
         }
-        .wrapper {
+        .pembungkus-utama {
           padding: 24px;
         }
         h1 {
@@ -236,22 +236,22 @@
           background: #fff;
           padding: 0;
         }
-        .wrapper {
+        .pembungkus-utama {
           box-shadow: none;
           border: none;
           padding: 0;
           max-width: 100%;
         }
-        .info-card {
+        .kartu-informasi {
           background: #fff !important;
           border: 1px solid #ccc !important;
         }
-        .focus-banner {
+        .spanduk-fokus {
           background: #fff !important;
           border: 1px solid #ccc !important;
           color: #000 !important;
         }
-        .disclaimer-banner {
+        .spanduk-transparansi {
           background: #fff !important;
           border: 1px solid #ccc !important;
         }
@@ -259,55 +259,55 @@
     </style>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="pembungkus-utama">
       <header>
-        <div class="badge">Biodata Pribadi</div>
+        <div class="lencana-status">Biodata Pribadi</div>
         <h1>Zakiatun Nufus</h1>
-        <div class="meta-stamp">Terakhir Diperbarui &bull; Mei 2026</div>
+        <div class="penanda-waktu">Terakhir Diperbarui &bull; Juni 2026</div>
       </header>
 
-      <div class="disclaimer-banner">
+      <div class="spanduk-transparansi">
         <strong>Catatan Transparansi:</strong> Profil ini disusun dan dirapikan
         tata bahasa serta visualnya menggunakan bantuan AI (asisten kecerdasan
-        buatan) agar lebih runut, minimalis, dan scannable. Namun, seluruh
+        buatan) agar lebih runut, minimalis, dan mudah dipahami. Namun, seluruh
         substansi, data diri, prinsip hidup, hingga detail terkecil di dalamnya
         murni dan sepenuhnya adalah cerminan jujur dari kondisi nyata saya.
       </div>
 
       <section>
         <h2>I. Identitas & Data Diri</h2>
-        <div class="info-grid">
-          <div class="info-card">
+        <div class="kisi-informasi">
+          <div class="kartu-informasi">
             <span>Lahir</span>
             <p>Pekon Balak, 15 Juli 1997 (29 Th)</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Status</span>
             <p>Belum Pernah Menikah</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Izin Wali (Bapak)</span>
             <p>Sudah Dapat Restu Penuh</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Suku / Agama</span>
             <p>Jawa / Islam</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Domisili Weekday</span>
             <p>Pulau Panggung, Tanggamus</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Domisili Weekend</span>
             <p>Wonosobo, Tanggamus</p>
           </div>
         </div>
         <h3>Kontak Wasilah (Kakak Kandung)</h3>
         <ul>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>Mba Sri:</strong> 0853-7977-6579
           </li>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>Mas Duwi:</strong> 0857-8339-7473
           </li>
         </ul>
@@ -317,27 +317,27 @@
         <h2>II. Pendidikan & Karir</h2>
         <h3>Pendidikan Formal</h3>
         <ul>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>S1 Ilmu Komputer</strong> &ndash; Universitas Lampung
             (2016&ndash;2021)
           </li>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>SMAN 1 Kotaagung</strong> (2013&ndash;2016)
           </li>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>SMPN 1 Wonosobo</strong> (2010&ndash;2013)
           </li>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>SDN 1 Padangmanis</strong> (2004&ndash;2010)
           </li>
         </ul>
         <h3>Pengalaman Kerja</h3>
         <ul>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>Guru di SMKN 1 Air Naningan</strong> (2024&ndash;Sekarang)
             &bull; <em>Aparatur Sipil Negara (ASN PPPK)</em>
           </li>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>Guru di SMKN 1 Kotaagung Barat</strong> (2021&ndash;2024)
           </li>
         </ul>
@@ -345,69 +345,68 @@
 
       <section>
         <h2>III. Gambaran Fisik & Kesehatan</h2>
-        <div class="info-grid">
-          <div class="info-card">
+        <div class="kisi-informasi">
+          <div class="kartu-informasi">
             <span>Tinggi / Berat</span>
-            <p>&plusmn;159 cm / &plusmn;70 kg</p>
+            <p>&plusmn;159 cm / &plusmn;66 kg</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Karakter Fisik</span>
             <p>Sawo Matang, Rambut Hitam Lurus, Mata Cokelat</p>
           </div>
-          <div class="info-card">
+          <div class="kartu-informasi">
             <span>Ciri Khas</span>
             <p>Gigi Gingsul & Tanda Lahir di Betis Belakang Kanan</p>
           </div>
         </div>
-        <p class="desc-text">
+        <p class="teks-deskripsi">
           <strong>Kondisi Medis Khusus:</strong> Memiliki riwayat gejala maag
-          sejak bangku SD dan kondisi medis kulit ringan berupa Keratosis
-          Pilaris (kulit ayam) di area sebagian lengan. Secara umum dalam
-          kondisi prima, bugar, dan siap menjalankan peran fisik sebagai seorang
-          istri.
+          saat bangku SD dan kondisi medis kulit ringan berupa Keratosis
+          Pilaris (kulit ayam) di area sebagian lengan. Saat ini saya sedang
+          berkomitmen aktif melakukan perbaikan kondisi fisik menuju berat badan
+          ideal demi menjaga kesehatan dan kebugaran jangka panjang.
         </p>
       </section>
 
       <section>
         <h2>IV. Karakter & Manajemen Hubungan</h2>
-        <div class="subsection-block">
-          <h3>Sifat Positif (Dampak Rumah Tangga)</h3>
-          <p class="desc-text">
+        <div class="blok-subbagian">
+          <h3>Sifat Positif</h3>
+          <p class="teks-deskripsi">
             Saya sangat menghargai komitmen, bertanggung jawab, dan berusaha
-            maksimal menempati janji. Sebagai pribadi yang terencana, saya
+            maksimal menepati janji. Sebagai pribadi yang terencana, saya
             menyukai persiapan matang namun senantiasa melatih diri rida pada
-            keputusan Allah. Dalam harian, saya jujur, apa adanya, menyukai
+            keputusan Allah. Dalam kesehariannya, saya jujur, apa adanya, menyukai
             kedamaian, serta menghindari konflik tidak produktif.
           </p>
         </div>
-        <div class="subsection-block">
+        <div class="blok-subbagian">
           <h3>Kekurangan & Ruang Evaluasi</h3>
-          <p class="desc-text">
+          <p class="teks-deskripsi">
             Saya tipe pemikir yang membutuhkan waktu tenang saat merespons
             masalah, membutuhkan durasi sedikit lebih lama mengolah hal baru,
-            cukup pelupa, dan mudah terdistraksi. Kadang kala saya memendam rasa
-            jengkel sendiri demi meminimalisir perselisihan. Saat ini, saya
-            aktif berproses menurunkan ego, melatih empati dari sudut pandang
-            orang lain, serta menjaga konsistensi ritme ibadah mandiri.
+            cukup pelupa, dan mudah terdistraksi. Saat ini, saya aktif berproses
+            menurunkan ego, melatih empati dari sudut pandang orang lain, serta
+            fokus memperbaiki kualitas dan kuantitas ibadah harian.
           </p>
         </div>
-        <div class="subsection-block">
+        <div class="blok-subbagian">
           <h3>Manajemen Konflik & Komunikasi Emosi</h3>
-          <p class="desc-text">
-            Saat terjadi ketidaksepahaman, kecenderungan asli saya adalah diam
-            sejenak mengolah pikiran. Apabila pasangan melihat perubahan sikap
-            atau tanda kemarahan, saya sangat mengharapkan pasangan bersedia
-            bertanya secara langsung dengan tutur kata lembut dan tidak
-            membentak. Pendekatan tenang ini membuat saya merasa aman untuk
-            berbicara jujur.
+          <p class="teks-deskripsi">
+            Saya menyadari bahwa saya masih belajar mengelola emosi dengan ideal. 
+            Mekanisme pertahanan diri tertinggi saya saat marah atau kecewa adalah 
+            <strong>diam</strong> dalam waktu yang cukup lama untuk memulihkan hati. 
+            Oleh karena itu, saya membutuhkan calon suami yang memiliki kelapangan dada, 
+            kesabaran, dan kedewasaan untuk tidak membalas sikap ini dengan ego yang sama tinggi, 
+            serta bersedia membimbing saya keluar dari masa diam tersebut dengan kelembutan.
           </p>
         </div>
-        <div class="subsection-block">
+        <div class="blok-subbagian">
           <h3>Prinsip Menerima Nasihat</h3>
-          <p class="desc-text">
+          <p class="teks-deskripsi">
             Saya sangat terbuka pada ruang evaluasi diri, kritik, dan bimbingan
             ilmu. Syarat utamanya adalah didiskusikan saat momen santai berdua
-            saja dan tidak ditegur di ruang publik atau depan orang lain demi
+            saja dan tidak ditegur di ruang publik atau di depan orang lain demi
             menjaga kehormatan kedua belah pihak.
           </p>
         </div>
@@ -415,7 +414,7 @@
 
       <section>
         <h2>V. Dinamika Keluarga & Ritme Harian</h2>
-        <p class="desc-text">
+        <p class="teks-deskripsi">
           Saat ini saya tinggal membersamai Bapak (Bapak Carsan, 72 tahun,
           Petani). Ibu telah berpulang ke Rahmatullah pada November 2022. Kami
           berakar dari latar belakang keluarga Nahdliyin sederhana yang
@@ -424,97 +423,93 @@
         </p>
         <h3>Jadwal & Aktivitas Rutin</h3>
         <ul>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>Hari Kerja (Weekday):</strong> Fokus profesi guru di
             sekolah. Wajib berada di instansi dari pukul 07.15 hingga 16.00 WIB.
           </li>
-          <li class="timeline-item">
+          <li class="baris-poin">
             <strong>Hari Libur (Weekend):</strong> Kembali ke Wonosobo,
-            produktif menyelesaikan urusan domestik rumah serta mengasuh dan
-            bermain dengan keponakan.
+            produktif menyelesaikan urusan domestik rumah serta bermain dengan keponakan.
           </li>
-          <li class="timeline-item">
-            <strong>Kebiasaan Spiritual:</strong> Menjaga salat tepat waktu,
-            merutinkan tilawah harian harian, serta berikhtiar memperkuat dan
-            membantu hafalan surah-surah pendek.
+          <li class="baris-poin">
+            <strong>Kebiasaan Spiritual:</strong> Sedang aktif meningkatkan 
+            konsistensi salat tepat waktu, merutinkan tilawah harian setelah subuh, 
+            serta menambah kuantitas ibadah sunah sebagai bagian dari ikhtiar memantaskan diri.
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>VI. Visi, Misi, & Masa Depan</h2>
-        <p class="desc-text">
-          <strong>Visi:</strong> Membangun rumah tangga sebagai madrasah pertama
-          yang sakinah, tempat untuk saling membimbing dan menguatkan dalam
-          ketaatan, serta terus belajar memperbaiki diri bersama secara
-          konsisten.
+        <h2>VI. Visi, Misi, & Komitmen Pernikahan</h2>
+        <p class="teks-deskripsi">
+          <strong>Visi:</strong> Membangun rumah tangga berlandaskan rida Allah, 
+          sebagai tempat bernaung yang aman, damai (sakinah), dan teratur, serta 
+          menjadi sarana bagi suami dan istri untuk saling memantaskan diri menuju surga-Nya.
         </p>
         <h3>Misi Utama Pernikahan</h3>
         <ul>
-          <li class="timeline-item">
-            Saling membimbing dalam koridor ketaatan.
+          <li class="baris-poin">
+            <strong>Menjadikan Syariat sebagai Fondasi:</strong> Menempatkan suami sebagai pemimpin 
+            dan murabbi, serta istri yang rida untuk ditaati dan dituntun dalam ilmu agama.
           </li>
-          <li class="timeline-item">
-            Bertumbuh dan belajar kolektif di berbagai lini kehidupan.
+          <li class="baris-poin">
+            <strong>Membina Komunikasi Setara:</strong> Membangun hubungan komunikasi dua arah yang nyambung 
+            secara intelektual, terbuka, dan saling memahami dinamika profesi masing-masing tanpa intimidasi.
           </li>
-          <li class="timeline-item">
-            Menerapkan komunikasi dua arah yang terbuka tanpa adanya intimidasi.
+          <li class="baris-poin">
+            <strong>Menciptakan Rumah Sakinah:</strong> Berkolaborasi secara harmonis menghadirkan suasana rumah 
+            yang tenang, bersih, rapi, dan damai sebagai tempat pulang terbaik bagi suami.
           </li>
-          <li class="timeline-item">
-            Berkomitmen melahirkan rumah yang aman dan penuh kasih untuk
-            mencetak generasi berakhlak mulia.
+          <li class="baris-poin">
+            <strong>Menjadi Mitra Bertumbuh:</strong> Saling mendukung dalam pencapaian dunia yang berkah, 
+            studi lanjut, maupun perjuangan akhirat/dakwah.
           </li>
         </ul>
         <h3>Rencana Domestik & Profesional</h3>
-        <p class="desc-text">
-          <strong>Kolaborasi Rumah Tangga:</strong> Karena jam kerja saya tetap
-          sebagai aparatur sipil negara, saya mengharapkan kerja sama tim
-          (teamwork) yang solid bersama suami dalam mengelola urusan domestik
-          rumah tangga secara fleksibel.
+        <p class="teks-deskripsi">
+          <strong>Komitmen Kontribusi Istri:</strong> Selain memberikan ketaatan dan kesetiaan penuh, 
+          saya berkomitmen untuk menjadi *support system* nomor satu bagi suami, menjaga keteraturan rumah, 
+          menjadi teman diskusi yang menghargai wibawa suami, serta terus belajar menurunkan ego untuk lebih 
+          terbuka menyampaikan isi hati.
         </p>
-        <p class="desc-text">
+        <p class="teks-deskripsi">
           <strong>Garis Masa Finansial:</strong> Menargetkan pernikahan di akhir
           tahun 2026 demi menuntaskan seluruh sisa tanggung jawab finansial
           personal, agar siap secara mental dan finansial mandiri. Konsep
           walimah didesain sederhana, syar'i, berupa syukuran khidmat tanpa
           hiburan musik berlebih yang memberatkan suami.
         </p>
-        <p class="desc-text">
-          <strong>Nafkah & Pengasuhan:</strong> Menyerahkan otoritas nafkah
-          kepada suami sebagai pemimpin, dan siap mengelolanya dengan qona'ah.
-          Untuk anak, prioritas awal pada akidah, adab, dan kedisiplinan ibadah,
-          dengan aspirasi jangka panjang melanjutkan studi ke pondok pesantren.
-        </p>
       </section>
 
       <section>
         <h2>VII. Parameter Calon Pasangan</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <span>Fisik Utama</span>
-            <p>Tinggi badan &ge; 160 cm</p>
+        <div class="kisi-informasi">
+          <div class="kartu-informasi">
+            <span>Pencapaian Dunia</span>
+            <p>Seimbang, mandiri, & paham dunia profesi guru/IT</p>
           </div>
-          <div class="info-card">
-            <span>Jarak Usia</span>
-            <p>2 tahun lebih muda s.d. 5 tahun lebih tua</p>
+          <div class="kartu-informasi">
+            <span>Kapasitas Agama</span>
+            <p>Lebih baik dari saya & siap menjadi Murabbi</p>
           </div>
-          <div class="info-card">
-            <span>Pendidikan</span>
-            <p>Minimal Diploma (D3) atau Sarjana (S1)</p>
+          <div class="kartu-informasi">
+            <span>Jarak Usia & Fisik</span>
+            <p>-2 th s.d. +5 th / Tinggi &ge; 160 cm</p>
           </div>
-          <div class="info-card">
-            <span>Status</span>
-            <p>Belum Pernah Menikah</p>
+          <div class="kartu-informasi">
+            <span>Pendidikan & Status</span>
+            <p>Min. D3/S1 & Belum Pernah Menikah</p>
           </div>
         </div>
-        <p class="desc-text">
-          <strong>Karakter Sosial & Keagamaan:</strong> Memiliki pemahaman agama
-          yang diaplikasikan dalam perilaku nyata, beretos kerja kuat,
-          bertanggung jawab mandiri atas nafkah, penyabar (tidak temperamental),
-          mampu berkomunikasi tanpa intimidasi, serta menghargai kapasitas
-          intelektual istri (mendukung proses belajar dan studi lanjut).
+        <p class="teks-deskripsi">
+          <strong>Kriteria Spesifik:</strong> Saya mencari sosok laki-laki yang memiliki 
+          pencapaian dunia/karier yang seimbang, serta memahami (atau minimal mengerti) dinamika 
+          profesi di bidang pendidikan dan teknologi informasi agar komunikasi harian kami nyambung. 
+          Dari segi akhirat, memiliki pemahaman agama yang lebih tinggi dari saya, serta rida bertindak 
+          sebagai <strong>murabbi (pembimbing spiritual)</strong> yang mampu menuntun dan mendidik saya 
+          dengan cara yang sabar, bijaksana, dan penuh kasih sayang.
         </p>
-        <p class="desc-text">
+        <p class="teks-deskripsi">
           <strong>Kondisi Geografis:</strong> Siap dan bersedia penuh berpindah
           domisili mengikuti penugasan atau tempat tinggal suami.
         </p>
@@ -522,7 +517,7 @@
 
       <section>
         <h2>VIII. Protokol Proses</h2>
-        <div class="focus-banner">
+        <div class="spanduk-fokus">
           <p>
             Penulisan profil ini adalah ikhtiar jujur untuk mengenalkan diri
             secara apa adanya. Dalam koridor proses, saya berkomitmen memegang
