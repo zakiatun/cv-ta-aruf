@@ -14,569 +14,303 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-  
-    <title>CV Taaruf Digital</title>
-    <!-- Google Fonts & Lucide Icons -->
+    
+    <title>CV Taaruf - Juni 2026</title>
+    <!-- Tailwind CSS v4.0 via CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons untuk Grafis Modern -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
     <style>
-        /* --- CORE VARIABLES (2026 Trend Color Palette) --- */
-        :root {
-            --bg-main: #f8fafc;
-            --bg-card: #ffffff;
-            --border-color: #e2e8f0;
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --primary: #4f46e5;
-            --primary-light: #eef2ff;
-            --accent: #0d9488;
-            --accent-light: #f0fdfa;
-            --danger: #e11d48;
-            --shadow: 0 4px 20px -2px rgba(148, 163, 184, 0.12), 0 2px 8px -1px rgba(148, 163, 184, 0.08);
-            --radius-lg: 24px;
-            --radius-md: 16px;
-            --radius-sm: 12px;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-main: #0b0f19;
-                --bg-card: #151b2c;
-                --border-color: #222f47;
-                --text-main: #f1f5f9;
-                --text-muted: #94a3b8;
-                --primary: #818cf8;
-                --primary-light: #1e2238;
-                --accent: #2dd4bf;
-                --accent-light: #132827;
-                --shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        /* --- RESET & BASE STYLES --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-        }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 2rem 1rem;
+            background-color: #fcfbf7;
         }
-
-        .container {
-            max-width: 1040px;
-            margin: 0 auto;
+        .bento-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.6);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- UTILITIES --- */
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            background: var(--primary-light);
-            color: var(--primary);
-        }
-        .badge.accent {
-            background: var(--accent-light);
-            color: var(--accent);
-        }
-
-        /* --- HEADER & DISCLAIMER --- */
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .disclaimer-box {
-            background: var(--bg-card);
-            border: 1px dashed var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-            text-align: left;
-            box-shadow: var(--shadow);
-        }
-
-        .disclaimer-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .disclaimer-box ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* --- BENTO GRID SYSTEM --- */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Card Span Rules */
-        .span-1 { grid-column: span 1; }
-        .span-2 { grid-column: span 2; }
-        .span-3 { grid-column: span 3; }
-
-        .card-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.75rem;
-        }
-
-        .card-title i {
-            color: var(--primary);
-        }
-
-        /* --- DATA STYLES --- */
-        .info-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .info-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .info-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-
-        .info-value {
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        /* Grid inside info list (e.g., Parent/Siblings) */
-        .sub-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .sub-card {
-            background: var(--bg-main);
-            padding: 1.25rem;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-        }
-
-        .sub-card h4 {
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Timeline Style */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            position: relative;
-            border-left: 2px solid var(--border-color);
-            padding-left: 1.25rem;
-            margin-left: 0.5rem;
-        }
-
-        .timeline-item {
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: calc(-1.25rem - 6px);
-            top: 6px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--primary);
-        }
-
-        .time-year {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .time-desc {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .time-sub {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Character & List Styles */
-        .bullet-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .bullet-list li {
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .bullet-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-size: 1.5rem;
-            line-height: 1;
-            top: -2px;
-        }
-
-        .bullet-list.danger li::before {
-            color: var(--danger);
-        }
-
-        /* --- RESPONSIVE BREAKPOINTS --- */
-        @media (max-width: 900px) {
-            .bento-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .span-2, .span-3 { grid-column: span 2; }
-        }
-
-        @media (max-width: 600px) {
-            .bento-grid {
-                grid-template-columns: 1fr;
-            }
-            .span-1, .span-2, .span-3 { grid-column: span 1; }
-            .sub-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.25rem; }
-            body { padding: 1rem 0.5rem; }
-        }
-
-        /* --- FOOTER / CLOSING --- */
-        footer {
-            margin-top: 3rem;
-            background: var(--primary-light);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            text-align: center;
-        }
-        footer p {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            max-width: 700px;
-            margin: 0 auto;
-            font-style: italic;
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(112, 128, 112, 0.08);
         }
     </style>
 </head>
-<body>
+<body class="text-stone-800 antialiased selection:bg-stone-200 selection:text-stone-900">
 
-    <div class="container">
+    <!-- Header Section -->
+    <header class="max-w-6xl mx-auto pt-12 px-4 text-center">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-600 border border-stone-200/60 mb-4">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Dokumen Rahasia Pembaruan Juni 2026
+        </span>
+        <h1 class="text-4xl font-bold tracking-tight text-stone-900 md:text-5xl">CV TAARUF</h1>
+        <p class="mt-3 text-stone-500 max-w-xl mx-auto text-sm md:text-base">Membangun rumah tangga sebagai ibadah terpanjang untuk meraih pahala dan rida Allah.</p>
         
-        <!-- HEADER & DISCLAIMER -->
-        <header>
-            <span class="badge"><i data-lucide="heart"></i> Dokumen Taaruf</span>
-            <h1>CV TAARUF</h1>
-            
-            <div class="disclaimer-box">
-                <div class="disclaimer-title">
-                    <i data-lucide="info"></i> Disclaimer & Catatan Awal
-                </div>
-                <ul>
-                    <li><strong>Pembaruan Data:</strong> Seluruh informasi dalam dokumen ini adalah data terbaru per <b>Juni 2026</b>.</li>
-                    <li><strong>Keterbatasan Informasi:</strong> Apa yang tertulis di sini disusun berdasarkan hal-hal yang saya ingat saat ini. Sadar bahwa manusia tempatnya lupa, mungkin belum semua detail karakter atau kebiasaan tercover sepenuhnya di dalam draf ini.</li>
-                    <li><strong>Tujuan Dokumen:</strong> CV ini dibuat dengan niat jujur untuk memberikan gambaran awal yang objektif. Hal-hal yang belum tertulis atau membutuhkan penjelasan lebih dalam, insyaallah bisa ditanyakan dan didiskusikan langsung pada tahap berikutnya (*nadzhor*).</li>
-                </ul>
+        <!-- Fitur Cari Cepat (Interaktif JS) -->
+        <div class="mt-8 max-w-md mx-auto relative">
+            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                <i data-lucide="search" class="h-4 w-4 text-stone-400"></i>
             </div>
-        </header>
+            <input type="text" id="searchInput" onkeyup="searchCV()" placeholder="Cari informasi (misal: 'pekerjaan', 'haji', 'rokok')..." class="block w-full rounded-xl border border-stone-200 bg-white py-2.5 pl-10 pr-4 text-sm text-stone-900 placeholder-stone-400 focus:border-stone-400 focus:outline-none focus:ring-1 focus:ring-stone-400 transition-all shadow-xs">
+        </div>
+    </header>
 
-        <div class="bento-grid">
-            
-            <!-- CARD 1: DATA DIRI UTAMA -->
-            <div class="card span-2">
-                <div class="card-title"><i data-lucide="user"></i> Profil Utama & Data Diri</div>
-                <div class="sub-grid">
-                    <ul class="info-list">
-                        <li class="info-item"><span class="info-label">Tempat, Tanggal Lahir</span><span class="info-value">Pekon Balak, 15 Juli 1997</span></li>
-                        <li class="info-item"><span class="info-label">Agama / Suku</span><span class="info-value">Islam / Jawa</span></li>
-                        <li class="info-item"><span class="info-label">Status Pernikahan</span><span class="info-value">Belum Pernah Menikah</span></li>
-                        <li class="info-item"><span class="info-label">Anak Ke</span><span class="info-value">4 dari 4 bersaudara</span></li>
-                    </ul>
-                    <ul class="info-list">
-                        <li class="info-item">
-                            <span class="info-label">Domisili Hari Kerja (Weekday)</span>
-                            <span class="info-value">Kel. Tekad, Kec. Pulau Panggung, Kab. Tanggamus, Lampung.</span>
-                        </li>
-                        <li class="info-item">
-                            <span class="info-label">Domisili Akhir Pekan (Weekend)</span>
-                            <span class="info-value">Kel. Pekon Balak, Kec. Wonosobo, Kab. Tanggamus, Lampung.</span>
-                        </li>
-                    </ul>
+    <!-- Main Container Bento Grid -->
+    <main class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Disclaimer (Full Width) -->
+        <section class="searchable-section md:col-span-3 bento-card p-6 rounded-2xl border-l-4 border-l-stone-400 bg-stone-50/50">
+            <div class="flex gap-3">
+                <i data-lucide="info" class="w-5 h-5 text-stone-600 shrink-0 mt-0.5"></i>
+                <div>
+                    <h2 class="font-semibold text-stone-900 text-sm tracking-wide uppercase">Disclaimer & Catatan Awal</h2>
+                    <p class="mt-2 text-stone-600 text-xs md:text-sm leading-relaxed">
+                        Data ini adalah informasi terbaru per <strong>Juni 2026</strong>. Disusun sejujurnya berdasarkan apa yang diingat saat ini. Sadar manusia tempatnya lupa, mungkin belum semua detail karakter tercakup. Hal mendalam lainnya bisa didiskusikan langsung saat tahap <em>nadzhor</em>.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- CARD 2: KONTAK -->
-            <div class="card span-1">
-                <div class="card-title"><i data-lucide="phone"></i> Kontak & Sosmed</div>
-                <ul class="info-list">
-                    <li class="info-item"><span class="info-label">Kontak Pribadi</span><span class="info-value">081273790050</span></li>
-                    <li class="info-item">
-                        <span class="info-label">Kontak Wasilah (Keluarga)</span>
-                        <span class="info-value" style="font-size: 0.9rem;">
-                            085379776579 (Mba Sri)<br>085783397473 (Mas Duwi)
-                        </span>
-                    </li>
-                    <li class="info-item">
-                        <span class="info-label">Media Sosial</span>
-                        <span class="info-value" style="font-size: 0.9rem;">
-                            IG: <a href="https://www.instagram.com/za.kiatun/" target="_blank">@za.kiatun</a><br>
-                            FB: <a href="https://web.facebook.com/zakia.saya" target="_blank">zakia.saya</a><br>
-                            In: <a href="https://www.linkedin.com/in/zakiatunnufus/" target="_blank">zakiatunnufus</a>
-                        </span>
-                    </li>
+        <!-- Kiri: Profil Utama & Kontak -->
+        <div class="space-y-6 md:col-span-1">
+            <!-- Profil Utama -->
+            <section class="searchable-section bento-card p-6 rounded-2xl">
+                <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                    <i data-lucide="user" class="w-5 h-5 text-stone-500"></i>
+                    <h2 class="font-bold text-lg">Profil Utama</h2>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex flex-col"><span class="text-stone-400 text-xs">Tempat, Tanggal Lahir</span> <span class="font-medium text-stone-900">Pekon Balak, 15 Juli 1997</span></li>
+                    <li class="flex flex-col"><span class="text-stone-400 text-xs">Suku / Agama</span> <span class="font-medium text-stone-900">Jawa / Islam</span></li>
+                    <li class="flex flex-col"><span class="text-stone-400 text-xs">Status / Anak Ke</span> <span class="font-medium text-stone-900">Belum Menikah / 4 dari 4 bersaudara</span></li>
+                    <li class="flex flex-col"><span class="text-stone-400 text-xs">Domisili Weekday</span> <span class="font-medium text-stone-700 text-xs">Kec. Pulau Panggung, Tanggamus, Lampung</span></li>
+                    <li class="flex flex-col"><span class="text-stone-400 text-xs">Domisili Weekend</span> <span class="font-medium text-stone-700 text-xs">Kec. Wonosobo, Tanggamus, Lampung</span></li>
                 </ul>
-            </div>
+            </section>
 
-            <!-- CARD 3: FISIK & KESEHATAN -->
-            <div class="card span-1">
-                <div class="card-title"><i data-lucide="accessibility"></i> Fisik & Kesehatan</div>
-                <ul class="info-list">
-                    <li class="info-item"><span class="info-label">Tinggi / Berat Badan</span><span class="info-value">159 cm / 68 kg</span></li>
-                    <li class="info-item"><span class="info-label">Bentuk Tubuh / Kulit</span><span class="info-value">Endomorf / Sawo Matang</span></li>
-                    <li class="info-item"><span class="info-label">Rambut & Mata</span><span class="info-value">Hitam Lurus, Mata Cokelat</span></li>
-                    <li class="info-item"><span class="info-label">Ciri Khas Fisik</span><span class="info-value">Gigi gingsul, tanda lahir di betis belakang kaki kanan</span></li>
-                    <li class="info-item"><span class="info-label">Kondisi Kulit</span><span class="info-value">Keratosis Pilaris (kulit ayam) di area lengan</span></li>
-                    <li class="info-item"><span class="info-label">Riwayat Penyakit</span><span class="info-value">Maag saat masa SD</span></li>
-                </ul>
-            </div>
-
-            <!-- CARD 4: PEKERJAAN & PENDIDIKAN -->
-            <div class="card span-2">
-                <div class="card-title"><i data-lucide="briefcase"></i> Pekerjaan & Pendidikan</div>
-                <div class="sub-grid">
-                    <div>
-                        <div class="info-label" style="margin-bottom: 0.75rem;">Riwayat Kerja</div>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="time-year">2024 - Sekarang</div>
-                                <div class="time-desc">Guru (PPPK)</div>
-                                <div class="time-sub">SMKN 1 Air Naningan (Senin-Jumat)</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="time-year">2021 - 2024</div>
-                                <div class="time-desc">Guru</div>
-                                <div class="time-sub">SMKN 1 Kotaagung Barat</div>
-                            </div>
-                        </div>
+            <!-- Kontak & Sosmed -->
+            <section class="searchable-section bento-card p-6 rounded-2xl bg-emerald-50/20">
+                <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                    <i data-lucide="phone" class="w-5 h-5 text-emerald-600"></i>
+                    <h2 class="font-bold text-lg">Kontak Wasilah</h2>
+                </div>
+                <div class="space-y-3 text-sm">
+                    <div class="p-2.5 bg-white rounded-xl border border-stone-100 shadow-2xs">
+                        <span class="text-xs text-stone-400 block">Kakak Kandung (Mba Sri)</span>
+                        <span class="font-mono text-stone-900 font-semibold text-xs">085379776579</span>
                     </div>
-                    <div>
-                        <div class="info-label" style="margin-bottom: 0.75rem;">Pendidikan Formal</div>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="time-year">2016 - 2021</div>
-                                <div class="time-desc">S1 Ilmu Komputer</div>
-                                <div class="time-sub">Universitas Lampung</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="time-year">2013 - 2016</div>
-                                <div class="time-desc">SMAN 1 Kotaagung</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="time-year">2010 - 2013</div>
-                                <div class="time-desc">SMPN 1 Wonosobo</div>
-                            </div>
-                        </div>
+                    <div class="p-2.5 bg-white rounded-xl border border-stone-100 shadow-2xs">
+                        <span class="text-xs text-stone-400 block">Kakak Kandung (Mas Duwi)</span>
+                        <span class="font-mono text-stone-900 font-semibold text-xs">085783397473</span>
+                    </div>
+                    <div class="pt-2 flex justify-around text-stone-500 border-t border-stone-100">
+                        <a href="https://www.instagram.com/za.kiatun/" target="_blank" class="hover:text-stone-900 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://web.facebook.com/zakia.saya" target="_blank" class="hover:text-stone-900 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="https://www.linkedin.com/in/zakiatunnufus/" target="_blank" class="hover:text-stone-900 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                     </div>
                 </div>
-            </div>
-
-            <!-- CARD 5: KARAKTER UTAMA -->
-            <div class="card span-3">
-                <div class="card-title"><i data-lucide="smile"></i> Gambaran Karakter & Kebiasaan</div>
-                <div class="sub-grid">
-                    <div>
-                        <div class="info-label" style="margin-bottom: 0.75rem; color: var(--accent);">Sifat Positif Utama</div>
-                        <ul class="bullet-list">
-                            <li><strong>Tipe Perencana (Planner):</strong> Lebih nyaman jika segala sesuatu dipersiapkan dengan matang dan terstruktur, termasuk menyiapkan mental untuk kemungkinan terburuk.</li>
-                            <li><strong>Berusaha Logis & Tenang:</strong> Berikhtiar untuk tetap berpikir jernih dan mengendalikan emosi saat menghadapi situasi darurat atau ujian berat.</li>
-                            <li><strong>Senang Berbagi & Pemaaf:</strong> Suka membahagiakan orang dekat lewat tindakan nyata, mudah melupakan kekesalan, dan berusaha tidak menyimpan dendam.</li>
-                            <li><strong>Menyukai Kerapian Domestik:</strong> Menikmati proses mengurus rumah tangga dan merasa rileks saat melihat rumah atau barang-barang tertata rapi.</li>
-                            <li><strong>Fokus Memperbaiki Diri:</strong> Sadar akan kekurangan diri dan selalu berupaya untuk belajar menjadi pribadi yang lebih baik.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="info-label" style="margin-bottom: 0.75rem; color: var(--danger);">Kekurangan & Pengelolaan Emosi</div>
-                        <ul class="bullet-list danger">
-                            <li><strong>Jika Marah atau Kecewa:</strong> Cenderung memilih diam dan menenangkan diri. Tidak menuntut orang lain minta maaf, tapi <b>butuh waktu dan ruang sendiri selama beberapa hari</b> sampai emosi mereda.</li>
-                            <li><strong>Komunikasi Spontan & Konfrontasi:</strong> Kurang nyaman dengan perdebatan langsung atau situasi mendadak. Lebih memilih menarik diri dan baru berbicara setelah memiliki waktu untuk berpikir.</li>
-                            <li><strong>Kurang Percaya Diri Menegur:</strong> Merasa kurang pandai atau belum percaya diri jika harus menegur atau mengajak orang lain pada kebaikan secara lisan/langsung.</li>
-                            <li><strong>Mimik Wajah Ekspresif:</strong> Kesulitan menyembunyikan ekspresi wajah saat tidak nyaman atau lelah (bisa refleks membentak jika emosi tidak stabil karena kelelahan).</li>
-                            <li><strong>Wawasan & Waktu Luang:</strong> Merasa wawasan umum masih terbatas. Saat ini masih proses mengurangi intensitas sosmed dengan dialihkan ke aktivitas fisik di rumah.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD 6: KEBIASAAN AGAMA -->
-            <div class="card span-1">
-                <div class="card-title"><i data-lucide="moon"></i> Kebiasaan Agama (Spiritual)</div>
-                <ul class="bullet-list">
-                    <li><strong>Ibadah Wajib:</strong> Sedang berikhtiar kuat untuk salat tepat waktu (berjuang melawan fase *futur*). Fokus mencicil utang qadha puasa masa lalu (target 100 hari).</li>
-                    <li><strong>Ibadah Sunnah:</strong> Rutin menjaga salat rawatib (terutama ba'diyah) dan berusaha istikamah tahajud minimal 2 rakaat.</li>
-                    <li><strong>Membaca Al-Qur'an:</strong> Membiasakan diri membaca 1 lembar setelah salat jika tidak terbentur aktivitas mendesak.</li>
-                    <li><strong>Metode Belajar:</strong> Mandiri (otodidak) lewat internet. Paling nyaman menyimak kajian YouTube Ustaz Andi Mahfudz.</li>
-                </ul>
-            </div>
-
-            <!-- CARD 7: VISI MISI PERNIKAHAN -->
-            <div class="card span-2">
-                <div class="card-title"><i data-lucide="compass"></i> Visi, Misi & Peran Pernikahan</div>
-                <ul class="bullet-list">
-                    <li><strong>Visi:</strong> Menjadikan pernikahan sebagai wadah ibadah bersama mencari pahala dan rida Allah, serta siap berjuang menghadapi tantangan hidup sesuai syariat.</li>
-                    <li><strong>Misi & Peran Utama:</strong>
-                        <ul style="padding-left: 1rem; list-style-type: circle; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                            <li><i>Spiritual:</i> Suami sebagai rekan bertumbuh belajar agama bareng dan pelindung dari fitnah.</li>
-                            <li><i>Komunikasi:</i> Membangun rumah tangga yang aman untuk tempat bercerita nyaman tanpa menghakimi.</li>
-                            <li><i>Finansial:</i> Nafkah kewajiban suami. Tetap bekerja guru untuk tabungan mandiri Umrah/Haji tanpa membebani suami.</li>
-                            <li><i>Domestik:</i> Urusan rumah tangga dikerjakan bersama sebagai tim, meneladani Rasulullah ﷺ (tidak patriarki kaku).</li>
-                        </ul>
-                    </li>
-                    <li><strong>Rencana Domestik & Pengasuhan:</strong>
-                        <ul style="padding-left: 1rem; list-style-type: circle; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                            <li><i>Target Waktu:</i> Akhir tahun 2026 (menyelesaikan tanggung jawab finansial pribadi dahulu agar lebih tenang).</li>
-                            <li><i>Walimah:</i> Sederhana di rumah pihak wanita (akad + doa bersama tetangga/keluarga). Pihak pria dibebaskan asal <b>tanpa hiburan biduan</b>.</li>
-                            <li><i>Tempat Tinggal:</i> Ikut ke mana pun suami bertugas (<b>tidak bersedia LDR/LDM</b>).</li>
-                            <li><i>Bakti Orang Tua:</i> Penghasilan guru tetap dipakai memberi uang jajan bulanan dan mengisi tabungan Haji Bapak.</li>
-                            <li><i>Parenting:</i> Goals akhirat. Utama diajarkan mengaji baru membaca/hitung. Rencana sekolah berbasis agama (MI/SIT) lalu pesantren.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- CARD 8: DATA KELUARGA -->
-            <div class="card span-2">
-                <div class="card-title"><i data-lucide="users"></i> Data & Latar Belakang Keluarga</div>
-                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-                    <b>Profil Keluarga:</b> Berasal dari keluarga Nahdliyin yang hidup sederhana. Kepribadian keluarga cenderung pendiam sehingga suasana rumah tenang. Jarang berkumpul lengkap kecuali acara tertentu. Saat ini tinggal bersama Bapak.
-                </p>
-                <div class="sub-grid">
-                    <div class="sub-card">
-                        <h4><span>Orang Tua</span> <i data-lucide="heart" style="width:16px; color:var(--danger)"></i></h4>
-                        <ul class="info-list" style="gap: 0.5rem; font-size: 0.9rem;">
-                            <li><b>Bapak:</b> Carsan (72th) - Petani [SD] (Hidup)</li>
-                            <li><b>Ibu:</b> Sukariah (Almarhumah, Wafat Nov 2022) [SD]</li>
-                        </ul>
-                    </div>
-                    <div class="sub-card">
-                        <h4><span>Saudara Kandung</span> <i data-lucide="layers" style="width:16px; color:var(--primary)"></i></h4>
-                        <ul class="info-list" style="gap: 0.5rem; font-size: 0.9rem;">
-                            <li><b>Kakak 1:</b> Sri Lestari (46th) - Guru [S1]</li>
-                            <li><b>Kakak 2:</b> Dwi Ikhtiardi (42th) - Petani [SMK]</li>
-                            <li><b>Kakak 3:</b> Koko Pramono (35th) - Satpol PP & Petani [SMK]</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD 9: KRITERIA PASANGAN -->
-            <div class="card span-1">
-                <div class="card-title"><i data-lucide="check-circle"></i> Kriteria Pasangan</div>
-                <div class="info-label" style="color: var(--accent); margin-bottom: 0.5rem;">Kriteria Wajib</div>
-                <ul class="bullet-list" style="font-size: 0.9rem; gap: 0.5rem; margin-bottom: 1rem;">
-                    <li><b>Ketaatan:</b> Paham hak & kewajiban suami sesuai syariat (tidak patriarki kaku).</li>
-                    <li><b>Emosi:</b> Stabil, mampu mengimbangi istri yang butuh jeda diam saat konflik.</li>
-                    <li><b>Hidup Sehat:</b> <b>Bukan perokok (Wajib)</b>, bersedia rutin olahraga bareng.</li>
-                    <li><b>Profesi:</b> Sejalan (Sesama Guru atau bidang IT).</li>
-                    <li><b>Fisik:</b> Tinggi minimal 160 cm.</li>
-                    <li><b>Kenyamanan:</b> Maklum istri mudah gerah (butuh sirkulasi udara/kipas angin intensif).</li>
-                </ul>
-                <div class="info-label" style="color: var(--danger); margin-bottom: 0.5rem;">Red Flag</div>
-                <ul class="bullet-list danger" style="font-size: 0.9rem;">
-                    <li>Tabiat buruk yang melanggar agama/akhlak (kasar, tidak jujur, melalaikan ibadah dasar).</li>
-                </ul>
-            </div>
-
+            </section>
         </div>
 
-        <!-- FOOTER / CLOSING -->
-        <footer>
-            <p><strong>Catatan Penutup:</strong> Apa yang saya sampaikan di dalam CV ini ditulis berdasarkan apa yang saya ingat saat ini. Mungkin belum semua hal atau detail karakter tercover secara menyeluruh, dan ada hal-hal kecil yang mungkin terlewat. Jika ada hal lain yang ingin diketahui atau perlu diperjelas, insyaallah bisa didiskusikan lebih lanjut pada tahap berikutnya.</p>
+        <!-- Tengah: Karakter, Karir & Pendidikan -->
+        <div class="space-y-6 md:col-span-1">
+            <!-- Pekerjaan & Pendidikan -->
+            <section class="searchable-section bento-card p-6 rounded-2xl">
+                <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                    <i data-lucide="briefcase" class="w-5 h-5 text-stone-500"></i>
+                    <h2 class="font-bold text-lg">Karir & Pendidikan</h2>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <span class="inline-block px-2 py-0.5 rounded text-xs bg-stone-100 text-stone-700 font-medium mb-1">Guru PPPK</span>
+                        <p class="text-sm font-semibold text-stone-900">SMKN 1 Air Naningan</p>
+                        <p class="text-stone-400 text-xs">Senin - Jumat (2024 - Sekarang)</p>
+                    </div>
+                    <div class="border-t border-stone-100 pt-3">
+                        <span class="text-stone-400 text-xs block">Pendidikan Terakhir</span>
+                        <p class="text-sm font-semibold text-stone-900">S1 Ilmu Komputer</p>
+                        <p class="text-stone-500 text-xs">Universitas Lampung (2016 - 2021)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Karakter Positf -->
+            <section class="searchable-section bento-card p-6 rounded-2xl">
+                <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                    <i data-lucide="smile" class="w-5 h-5 text-stone-500"></i>
+                    <h2 class="font-bold text-lg">Karakter Utama</h2>
+                </div>
+                <ul class="space-y-2.5 text-xs text-stone-600">
+                    <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span><strong>Tipe Perencana:</strong> Matang & siap mitigasi mental terburuk.</span></li>
+                    <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Berusaha logis & mengontrol emosi saat krisis.</span></li>
+                    <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Suka berbagi, pemaaf, & tidak simpan dendam.</span></li>
+                    <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Menyukai kerapian rumah tangga (rileks saat menata).</span></li>
+                    <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Konsisten evaluasi diri demi perbaikan moral.</span></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Kanan: Fisik & Kesehatan -->
+        <div class="space-y-6 md:col-span-1">
+            <!-- Fisik & Medis -->
+            <section class="searchable-section bento-card p-6 rounded-2xl">
+                <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                    <i data-lucide="activity" class="w-5 h-5 text-stone-500"></i>
+                    <h2 class="font-bold text-lg">Fisik & Kesehatan</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                    <div class="p-2.5 bg-stone-50 rounded-xl text-center">
+                        <span class="text-stone-400 text-xs block">Tinggi Badan</span>
+                        <span class="text-sm font-semibold text-stone-900">± 159 cm</span>
+                    </div>
+                    <div class="p-2.5 bg-stone-50 rounded-xl text-center">
+                        <span class="text-stone-400 text-xs block">Berat Badan</span>
+                        <span class="text-sm font-semibold text-stone-900">± 68 kg</span>
+                    </div>
+                </div>
+                <ul class="space-y-2 text-xs text-stone-600 border-t border-stone-100 pt-3">
+                    <li><span class="text-stone-400">Bentuk Tubuh / Kulit:</span> Endomorf / Sawo Matang</li>
+                    <li><span class="text-stone-400">Ciri Khas:</span> Gigi gingsul & tanda lahir di betis kanan belakang.</li>
+                    <li><span class="text-stone-400">Kulit:</span> Ada <em>Keratosis Pilaris</em> (kulit ayam) di area lengan.</li>
+                    <li><span class="text-stone-400">Kesehatan:</span> Ada riwayat penyakit maag saat masa SD.</li>
+                </ul>
+            </section>
+
+            <!-- Spiritual / Keagamaan -->
+            <section class="searchable-section bento-card p-6 rounded-2xl">
+                <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                    <i data-lucide="heart" class="w-5 h-5 text-stone-500"></i>
+                    <h2 class="font-bold text-lg">Kebiasaan Spiritual</h2>
+                </div>
+                <ul class="space-y-3 text-xs text-stone-600">
+                    <li><strong>Wajib:</strong> Berikhtiar salat tepat waktu & fokus qadha puasa masa lalu (target 100 hari).</li>
+                    <li><strong>Sunnah:</strong> Menjaga rawatib ba'diyah & mengusahakan tahajud (terbiasa bangun jam 4 pagi).</li>
+                    <li><strong>Al-Qur'an:</strong> Membiasakan diri membaca 1 lembar setelah salat jika luang.</li>
+                    <li><strong>Metode Belajar:</strong> Otodidak via internet, rutin menyimak YouTube Ustadz Andi Mahfudz.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Baris Baru: Pengelolaan Emosi & Latar Belakang Keluarga (2/3 & 1/3) -->
+        <section class="searchable-section md:col-span-2 bento-card p-6 rounded-2xl">
+            <div class="flex items-center gap-3 mb-4 text-stone-900 border-b border-stone-100 pb-3">
+                <i data-lucide="frown" class="w-5 h-5 text-stone-500"></i>
+                <h2 class="font-bold text-lg">Kekurangan & Mekanisme Emosi</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-stone-600">
+                <div class="space-y-2">
+                    <p><strong>Saat Marah/Kecewa:</strong> Diam, menenangkan diri, atau menangis tanpa suara. Tidak menuntut maaf langsung, tapi <strong>butuh jeda waktu/ruang sendiri beberapa hari</strong>.</p>
+                    <p><strong>Komunikasi Spontan:</strong> Kurang nyaman dengan debat langsung atau orang keras kepala. Butuh waktu berpikir sebelum bicara.</p>
+                </div>
+                <div class="space-y-2">
+                    <p><strong>Sosial & Kendala:</strong> Kurang percaya diri menegur orang secara lisan. Mimik wajah ekspresif saat lelah (refleks membentak keponakan jika tidak mindful).</p>
+                    <p><strong>Wawasan & Waktu Luang:</strong> Wawasan umum masih terbatas. Masih berproses mengurangi kecanduan medsos dan dialihkan ke aktivitas fisik.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="searchable-section md:col-span-1 bento-card p-6 rounded-2xl bg-amber-50/10">
+            <div class="flex items-center gap-3 mb-3 text-stone-900 border-b border-stone-100 pb-3">
+                <i data-lucide="users" class="w-5 h-5 text-stone-500"></i>
+                <h2 class="font-bold text-lg">Latar Belakang Keluarga</h2>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed mb-3">
+                Keluarga Nahdliyin, sederhana, cenderung pendiam, dan suasana rumah tenang. Jarang kumpul kecuali momen tertentu. Saat ini tinggal bersama Bapak.
+            </p>
+            <div class="text-[11px] text-stone-500 space-y-1 bg-white p-2.5 rounded-xl border border-stone-100">
+                <p>• <strong>Bapak (72 th):</strong> Petani (Pendidikan SD)</p>
+                <p>• <strong>Ibu:</strong> Almarhumah (Wafat Nov 2022)</p>
+                <p>• <strong>Kakak 1:</strong> Guru (S1) | <strong>Kakak 2:</strong> Petani (SMK)</p>
+                <p>• <strong>Kakak 3:</strong> Satpol PP & Petani (SMK)</p>
+            </div>
+        </section>
+
+        <!-- Baris Baru: Visi Misi & Kriteria Pasangan (Full width sections) -->
+        <section class="searchable-section md:col-span-3 bento-card p-6 rounded-2xl bg-gradient-to-br from-white to-stone-50/30">
+            <div class="flex items-center gap-3 mb-6 text-stone-900 border-b border-stone-100 pb-3">
+                <i data-lucide="compass" class="w-5 h-5 text-stone-600"></i>
+                <h2 class="font-bold text-xl">Visi, Misi, & Rencana Pernikahan</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div>
+                    <h3 class="font-semibold text-stone-900 mb-2">Visi & Misi</h3>
+                    <p class="text-xs text-stone-600 mb-3 font-medium">Visi: Menjadikan pernikahan sebagai ibadah terpanjang mencari rida Allah & berjuang bersama sesuai syariat.</p>
+                    <ul class="space-y-2 text-xs text-stone-600">
+                        <li>• <strong>Spiritual:</strong> Suami sebagai rekan diskusi agama & pelindung fitnah.</li>
+                        <li>• <strong>Finansial:</strong> Tetap bekerja guru untuk tabungan Haji/Umrah Bapak & mandiri tanpa membebani nafkah suami.</li>
+                        <li>• <strong>Domestik:</strong> Kerja sama tim, tidak patriarki kaku, meneladani Rasulullah ﷺ.</li>
+                    </ul>
+                </div>
+                <div class="space-y-3 text-xs text-stone-600 bg-white p-4 rounded-xl border border-stone-100/70 shadow-2xs">
+                    <p>• <strong>Target Nikah:</strong> <span class="bg-amber-100 text-amber-900 font-medium px-1 rounded">Akhir Tahun 2026</span> (Menyelesaikan tanggung jawab finansial pribadi agar tenang).</p>
+                    <p>• <strong>Walimah:</strong> Pihak wanita sangat sederhana di rumah tanpa resepsi besar. Pihak pria bebas, syarat mutlak <em>tanpa biduan</em>.</p>
+                    <p>• <strong>Domestik:</strong> Siap ikut ke mana pun suami bertugas (<strong>Tidak bersedia LDR</strong>).</p>
+                    <p>• <strong>Parenting:</strong> Goal akhirat. Mengaji adalah hal pertama yang diajarkan, lalu sekolah berbasis agama (MI/IT) & pesantren.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kriteria & Red Flag -->
+        <section class="searchable-section md:col-span-3 bento-card p-6 rounded-2xl bg-stone-900 text-stone-100">
+            <div class="flex items-center gap-3 mb-4 border-b border-stone-800 pb-3">
+                <i data-lucide="sliders" class="w-5 h-5 text-stone-400"></i>
+                <h2 class="font-bold text-lg">Kriteria Pasangan & Hal Yang Tidak Ditoleransi</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-stone-300">
+                <div>
+                    <h3 class="font-medium text-stone-400 mb-2 uppercase tracking-wider text-[11px]">Kriteria Wajib (Mutlak)</h3>
+                    <ul class="space-y-2">
+                        <li>• <strong>Paham Syariat:</strong> Mengerti hak & kewajiban suami (bukan patriarki kaku).</li>
+                        <li>• <strong>Emosi Stabil:</strong> Mampu mengimbangi istri yang butuh jeda diam saat konflik.</li>
+                        <li>• <strong>Gaya Hidup:</strong> <span class="text-emerald-400 font-semibold underline">Bukan Perokok (Wajib)</span> & suka olahraga.</li>
+                        <li>• <strong>Profesi & Fisik:</strong> Sesama Guru atau bidang IT; Tinggi minimal 160 cm.</li>
+                        <li>• <strong>Catatan Fisik:</strong> Maklum jika istri mudah gerah (butuh kipas angin intensif).</li>
+                    </ul>
+                </div>
+                <div class="border-t border-stone-800 md:border-t-0 md:border-l md:border-stone-800 md:pl-6 pt-4 md:pt-0">
+                    <h3 class="font-medium text-rose-400 mb-2 uppercase tracking-wider text-[11px]">Hal Tidak Ditoleransi (Red Flag)</h3>
+                    <p class="leading-relaxed text-stone-400 bg-rose-950/20 p-3 rounded-xl border border-rose-900/30">
+                        Laki-laki dengan tabiat buruk yang bertentangan dengan agama dan akhlak karimah (seperti bertindak kasar, tidak jujur, atau melalaikan kewajiban ibadah dasar).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catatan Penutup (Full Width) -->
+        <footer class="md:col-span-3 text-center py-8 text-stone-400 text-xs space-y-2 border-t border-stone-200/40 mt-6">
+            <p>Selesai disusun dengan niat baik & ikhtiar yang tulus.</p>
+            <p class="max-w-md mx-auto text-[11px] italic">"Apa yang disampaikan ditulis berdasarkan ingatan saat ini. Hal kecil yang terlewat bisa diperjelas pada tahap diskusi berikutnya."</p>
         </footer>
 
-    </div>
+    </main>
 
-    <!-- Script to Initialize Lucide Icons -->
+    <!-- JavaScript Interaktif Terbaru v2026 -->
     <script>
+        // Inisialisasi Lucide Icons
         lucide.createIcons();
+
+        // Fungsi Pencarian Real-time Otomatis
+        function searchCV() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.searchable-section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    section.style.display = "";
+                    section.style.opacity = "1";
+                    section.style.transform = "scale(1)";
+                } else {
+                    section.style.display = "none";
+                    section.style.opacity = "0";
+                }
+            });
+        }
     </script>
 </body>
 </html>
