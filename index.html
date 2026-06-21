@@ -253,7 +253,7 @@
                             </div>
                             <div class="space-y-1 bg-slate-50 p-3 rounded-xl">
                                 <span class="font-bold text-slate-900 block text-sm">Cara Belajar Agama</span>
-                                Belajar mandiri (otodidak) lewat media sosial/internet karena belum memiliki guru spiritual langsung. Saat ini paling nyaman menyimak kajian di kanal YouTube Ustaz Andi Mahfudz.
+                                Belajar mandiri (otodidak) lewat media sosial/internet karena belum memiliki guru spiritual langsung. Saat ini paling nyaman menyimak kajian di kanal <a href="https://www.youtube.com/@andi_mahfudz" target="_blank" class="text-emerald-700 font-medium hover:underline inline-flex items-center gap-0.5">YouTube Ustaz Andi Mahfudz</a>.
                             </div>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                         </div>
                     </div>
 
-                    <!-- Kriteria Pasangan -->
+                    <!-- Kriteria Pasangan & Red Flag (Grid View) -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <!-- Kolom Kriteria (Lebih Lebar) -->
                         <div class="glass-card p-6 rounded-2xl space-y-4 md:col-span-2 bg-emerald-50/15 border-emerald-600/10">
@@ -329,6 +329,12 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- Kolom Red Flag (Soft Rose Pastel) -->
+                        <div class="bg-rose-50/40 backdrop-blur-md border border-rose-200/50 p-6 rounded-2xl space-y-3 shadow-xs h-fit">
+                            <h4 class="heading-font font-bold text-rose-800 uppercase tracking-wider text-xs">Hal yang Tidak Bisa Ditoleransi (Red Flag)</h4>
+                            <p class="text-rose-950/80 text-xs leading-relaxed">Laki-laki yang memiliki tabiat buruk yang bertentangan dengan norma agama dan akhlak karimah (seperti bersikap kasar, tidak jujur, atau melalaikan kewajiban ibadah dasar).</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -339,7 +345,6 @@
     <!-- Tab Switching Logic Script -->
     <script>
         function switchTab(tabId) {
-            // Logika fungsi filter navigasi tab untuk bento box view
             const sections = document.querySelectorAll('.section-block');
             const buttons = document.querySelectorAll('.tab-btn');
             
